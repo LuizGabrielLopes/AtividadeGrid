@@ -1,61 +1,75 @@
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    grid-template-rows: auto 1fr auto; 
-    grid-template-areas: 
-      "header header header"
-      "nav nav nav"
-      "section  section aside"
-      "article  article aside"
-      "footer  footer footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "section  section aside"
+        "article  article aside"
+        "footer  footer footer";
     gap: 5px;
     height: 100vh;
-  }
+}
 
-  .header {
+.header {
     grid-area: header;
     background-color: blue;
     height: 10rem;
     text-align: center;
     color: white;
-  }
+}
 
-  .nav {
+.nav {
     grid-area: nav;
     background-color: yellow;
     height: 10rem;
     text-align: center;
     color: white;
-  }
+}
 
-  .section {
+.section {
     grid-area: section;
     background-color: brown;
     height: 20rem;
     text-align: center;
     color: white;
-  }
+}
 
-  .article {
+.article {
     grid-area: article;
     background-color: red;
     height: 20rem;
     text-align: center;
     color: white;
-  }
+}
 
-  .aside {
+.aside {
     grid-area: aside;
     background-color: green;
     text-align: center;
     color: white;
     width: 20rem;
-  }
+}
 
-  .footer {
+.footer {
     grid-area: footer;
     background-color: #dd10f0;
     height: 5rem;
     text-align: center;
     color: white;
-  }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "header"
+            "nav"
+            "section"
+            "article"
+            "aside"
+            "footer";
+    }
+}
